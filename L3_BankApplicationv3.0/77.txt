@@ -1,0 +1,10 @@
+			Name: Vasanth
+			Customer ID: 77
+			Account No: 77077
+
+TransID        TransType                Amount         Balance        
+1              Opening                  10000          10000          
+2              TransferTo 55055         1000           9000           
+3              TransferTo 55055         1000           8000           
+4              TransferTo 55055         1000           7000           
+5              TransferTo 55055         1000           6000           

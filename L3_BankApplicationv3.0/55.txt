@@ -1,0 +1,16 @@
+			Name: Aswinth
+			Customer ID: 55
+			Account No: 55055
+
+TransID        TransType                Amount         Balance        
+1              Opening                  10000          10000          
+2              Cash Deposit             30000000       30010000       
+3              Cash Deposit             30000000       60010000       
+4              Cash Deposit             30000000       90010000       
+5              Cash Deposit             30000000       120010000      
+6              Cash Deposit             30000000       150010000      
+7              Cash Deposit             30000000       180010000      
+8              Cash Deposit             30000000       210010000      
+9              Cash Deposit             30000000       240010000      
+10             Cash Deposit             30000000       270010000      
+11             ATM Withdrawal           1              270009999      

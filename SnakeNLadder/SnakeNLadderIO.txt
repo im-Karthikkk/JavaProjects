@@ -1,0 +1,561 @@
+Enter no of snakes: 
+9
+Enter snakes head and tail: 
+62 5
+33 6
+49 9
+88 16
+41 20
+56 53
+98 64
+93 73
+95 75
+Enter no of ladders: 
+8
+Enter ladders start and end: 
+2 37
+27 46
+10 32
+51 68
+61 79
+65 84
+71 91
+81 100
+Enter no of players: 
+5
+Enter players name: Aswinth
+Harish
+Vasanth
+SivaramaKrishna
+Hari
+Select Dice Value Input: 
+	1.Randomly generated
+	2.User input1
+Aswinth rolled a 5
+Aswinth rolled a 5 and moved from 0 to 5
+Harish rolled a 1
+Harish rolled a 1 and moved from 0 to 1
+Vasanth rolled a 5
+Vasanth rolled a 5 and moved from 0 to 5
+SivaramaKrishna rolled a 2
+SivaramaKrishna rolled a 2 and moved from 0 to 37
+Hari rolled a 3
+Hari rolled a 3 and moved from 0 to 3
+Aswinth rolled a 6
+Aswinth rolled a 6 and moved from 5 to 11
+Harish rolled a 2
+Harish rolled a 2 and moved from 1 to 3
+Vasanth rolled a 3
+Vasanth rolled a 3 and moved from 5 to 8
+SivaramaKrishna rolled a 4
+SivaramaKrishna rolled a 4 and moved from 37 to 20
+Hari rolled a 2
+Hari rolled a 2 and moved from 3 to 5
+Aswinth rolled a 3
+Aswinth rolled a 3 and moved from 11 to 14
+Harish rolled a 4
+Harish rolled a 4 and moved from 3 to 7
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 8 to 32
+SivaramaKrishna rolled a 2
+SivaramaKrishna rolled a 2 and moved from 20 to 22
+Hari rolled a 3
+Hari rolled a 3 and moved from 5 to 8
+Aswinth rolled a 2
+Aswinth rolled a 2 and moved from 14 to 16
+Harish rolled a 3
+Harish rolled a 3 and moved from 7 to 32
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 32 to 34
+SivaramaKrishna rolled a 2
+SivaramaKrishna rolled a 2 and moved from 22 to 24
+Hari rolled a 3
+Hari rolled a 3 and moved from 8 to 11
+Aswinth rolled a 3
+Aswinth rolled a 3 and moved from 16 to 19
+Harish rolled a 6
+Harish rolled a 6 and moved from 32 to 38
+Vasanth rolled a 5
+Vasanth rolled a 5 and moved from 34 to 39
+SivaramaKrishna rolled a 3
+SivaramaKrishna rolled a 3 and moved from 24 to 46
+Hari rolled a 1
+Hari rolled a 1 and moved from 11 to 12
+Aswinth rolled a 1
+Aswinth rolled a 1 and moved from 19 to 20
+Harish rolled a 3
+Harish rolled a 3 and moved from 38 to 20
+Vasanth rolled a 4
+Vasanth rolled a 4 and moved from 39 to 43
+SivaramaKrishna rolled a 6
+SivaramaKrishna rolled a 6 and moved from 46 to 52
+Hari rolled a 4
+Hari rolled a 4 and moved from 12 to 16
+Aswinth rolled a 5
+Aswinth rolled a 5 and moved from 20 to 25
+Harish rolled a 6
+Harish rolled a 6 and moved from 20 to 26
+Vasanth rolled a 6
+Vasanth rolled a 6 and moved from 43 to 9
+SivaramaKrishna rolled a 6
+SivaramaKrishna rolled a 6 and moved from 52 to 58
+Hari rolled a 4
+Hari rolled a 4 and moved from 16 to 20
+Aswinth rolled a 4
+Aswinth rolled a 4 and moved from 25 to 29
+Harish rolled a 5
+Harish rolled a 5 and moved from 26 to 31
+Vasanth rolled a 4
+Vasanth rolled a 4 and moved from 9 to 13
+SivaramaKrishna rolled a 1
+SivaramaKrishna rolled a 1 and moved from 58 to 59
+Hari rolled a 5
+Hari rolled a 5 and moved from 20 to 25
+Aswinth rolled a 4
+Aswinth rolled a 4 and moved from 29 to 6
+Harish rolled a 2
+Harish rolled a 2 and moved from 31 to 6
+Vasanth rolled a 3
+Vasanth rolled a 3 and moved from 13 to 16
+SivaramaKrishna rolled a 3
+SivaramaKrishna rolled a 3 and moved from 59 to 5
+Hari rolled a 5
+Hari rolled a 5 and moved from 25 to 30
+Aswinth rolled a 4
+Aswinth rolled a 4 and moved from 6 to 32
+Harish rolled a 6
+Harish rolled a 6 and moved from 6 to 12
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 16 to 18
+SivaramaKrishna rolled a 2
+SivaramaKrishna rolled a 2 and moved from 5 to 7
+Hari rolled a 4
+Hari rolled a 4 and moved from 30 to 34
+Aswinth rolled a 2
+Aswinth rolled a 2 and moved from 32 to 34
+Harish rolled a 6
+Harish rolled a 6 and moved from 12 to 18
+Vasanth rolled a 4
+Vasanth rolled a 4 and moved from 18 to 22
+SivaramaKrishna rolled a 1
+SivaramaKrishna rolled a 1 and moved from 7 to 8
+Hari rolled a 4
+Hari rolled a 4 and moved from 34 to 38
+Aswinth rolled a 3
+Aswinth rolled a 3 and moved from 34 to 37
+Harish rolled a 5
+Harish rolled a 5 and moved from 18 to 23
+Vasanth rolled a 5
+Vasanth rolled a 5 and moved from 22 to 46
+SivaramaKrishna rolled a 5
+SivaramaKrishna rolled a 5 and moved from 8 to 13
+Hari rolled a 4
+Hari rolled a 4 and moved from 38 to 42
+Aswinth rolled a 2
+Aswinth rolled a 2 and moved from 37 to 39
+Harish rolled a 2
+Harish rolled a 2 and moved from 23 to 25
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 46 to 48
+SivaramaKrishna rolled a 1
+SivaramaKrishna rolled a 1 and moved from 13 to 14
+Hari rolled a 2
+Hari rolled a 2 and moved from 42 to 44
+Aswinth rolled a 5
+Aswinth rolled a 5 and moved from 39 to 44
+Harish rolled a 1
+Harish rolled a 1 and moved from 25 to 26
+Vasanth rolled a 1
+Vasanth rolled a 1 and moved from 48 to 9
+SivaramaKrishna rolled a 2
+SivaramaKrishna rolled a 2 and moved from 14 to 16
+Hari rolled a 2
+Hari rolled a 2 and moved from 44 to 46
+Aswinth rolled a 1
+Aswinth rolled a 1 and moved from 44 to 45
+Harish rolled a 3
+Harish rolled a 3 and moved from 26 to 29
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 9 to 11
+SivaramaKrishna rolled a 3
+SivaramaKrishna rolled a 3 and moved from 16 to 19
+Hari rolled a 3
+Hari rolled a 3 and moved from 46 to 9
+Aswinth rolled a 5
+Aswinth rolled a 5 and moved from 45 to 50
+Harish rolled a 2
+Harish rolled a 2 and moved from 29 to 31
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 11 to 13
+SivaramaKrishna rolled a 6
+SivaramaKrishna rolled a 6 and moved from 19 to 25
+Hari rolled a 4
+Hari rolled a 4 and moved from 9 to 13
+Aswinth rolled a 1
+Aswinth rolled a 1 and moved from 50 to 68
+Harish rolled a 5
+Harish rolled a 5 and moved from 31 to 36
+Vasanth rolled a 3
+Vasanth rolled a 3 and moved from 13 to 16
+SivaramaKrishna rolled a 3
+SivaramaKrishna rolled a 3 and moved from 25 to 28
+Hari rolled a 4
+Hari rolled a 4 and moved from 13 to 17
+Aswinth rolled a 4
+Aswinth rolled a 4 and moved from 68 to 72
+Harish rolled a 2
+Harish rolled a 2 and moved from 36 to 38
+Vasanth rolled a 3
+Vasanth rolled a 3 and moved from 16 to 19
+SivaramaKrishna rolled a 3
+SivaramaKrishna rolled a 3 and moved from 28 to 31
+Hari rolled a 3
+Hari rolled a 3 and moved from 17 to 20
+Aswinth rolled a 4
+Aswinth rolled a 4 and moved from 72 to 76
+Harish rolled a 4
+Harish rolled a 4 and moved from 38 to 42
+Vasanth rolled a 4
+Vasanth rolled a 4 and moved from 19 to 23
+SivaramaKrishna rolled a 1
+SivaramaKrishna rolled a 1 and moved from 31 to 32
+Hari rolled a 3
+Hari rolled a 3 and moved from 20 to 23
+Aswinth rolled a 3
+Aswinth rolled a 3 and moved from 76 to 79
+Harish rolled a 4
+Harish rolled a 4 and moved from 42 to 46
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 23 to 25
+SivaramaKrishna rolled a 2
+SivaramaKrishna rolled a 2 and moved from 32 to 34
+Hari rolled a 5
+Hari rolled a 5 and moved from 23 to 28
+Aswinth rolled a 4
+Aswinth rolled a 4 and moved from 79 to 83
+Harish rolled a 5
+Harish rolled a 5 and moved from 46 to 68
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 25 to 46
+SivaramaKrishna rolled a 4
+SivaramaKrishna rolled a 4 and moved from 34 to 38
+Hari rolled a 5
+Hari rolled a 5 and moved from 28 to 6
+Aswinth rolled a 2
+Aswinth rolled a 2 and moved from 83 to 85
+Harish rolled a 3
+Harish rolled a 3 and moved from 68 to 91
+Vasanth rolled a 3
+Vasanth rolled a 3 and moved from 46 to 9
+SivaramaKrishna rolled a 6
+SivaramaKrishna rolled a 6 and moved from 38 to 44
+Hari rolled a 2
+Hari rolled a 2 and moved from 6 to 8
+Aswinth rolled a 1
+Aswinth rolled a 1 and moved from 85 to 86
+Harish rolled a 6
+Harish rolled a 6 and moved from 91 to 97
+Vasanth rolled a 3
+Vasanth rolled a 3 and moved from 9 to 12
+SivaramaKrishna rolled a 1
+SivaramaKrishna rolled a 1 and moved from 44 to 45
+Hari rolled a 1
+Hari rolled a 1 and moved from 8 to 9
+Aswinth rolled a 5
+Aswinth rolled a 5 and moved from 86 to 91
+Harish rolled a 3
+Harish rolled a 3 and moved from 97 to 100
+Harish wins the game
+
+
+Enter no of snakes: 
+9
+Enter snakes head and tail: 
+62 5
+33 6
+49 9
+88 16
+41 20
+56 53
+98 64
+93 73
+95 75
+Enter no of ladders: 
+8
+Enter ladders start and end: 
+2 37
+27 46
+10 32
+51 68
+61 79
+65 84
+71 91
+81 100
+Enter no of players: 
+5
+Enter players name: Aswinth
+Harish
+Vasanth
+SivaramaKrishnan
+Hari
+Select Dice Value Input: 
+	1.Randomly generated
+	2.User input1
+Aswinth rolled a 4
+Aswinth rolled a 4 and moved from 0 to 4
+Harish rolled a 1
+Harish rolled a 1 and moved from 0 to 1
+Vasanth rolled a 4
+Vasanth rolled a 4 and moved from 0 to 4
+SivaramaKrishnan rolled a 4
+SivaramaKrishnan rolled a 4 and moved from 0 to 4
+Hari rolled a 2
+Hari rolled a 2 and moved from 0 to 37
+Aswinth rolled a 2
+Aswinth rolled a 2 and moved from 4 to 6
+Harish rolled a 6
+Harish rolled a 6 and moved from 1 to 7
+Vasanth rolled a 5
+Vasanth rolled a 5 and moved from 4 to 9
+SivaramaKrishnan rolled a 4
+SivaramaKrishnan rolled a 4 and moved from 4 to 8
+Hari rolled a 4
+Hari rolled a 4 and moved from 37 to 20
+Aswinth rolled a 3
+Aswinth rolled a 3 and moved from 6 to 9
+Harish rolled a 1
+Harish rolled a 1 and moved from 7 to 8
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 9 to 11
+SivaramaKrishnan rolled a 5
+SivaramaKrishnan rolled a 5 and moved from 8 to 13
+Hari rolled a 1
+Hari rolled a 1 and moved from 20 to 21
+Aswinth rolled a 4
+Aswinth rolled a 4 and moved from 9 to 13
+Harish rolled a 2
+Harish rolled a 2 and moved from 8 to 32
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 11 to 13
+SivaramaKrishnan rolled a 3
+SivaramaKrishnan rolled a 3 and moved from 13 to 16
+Hari rolled a 3
+Hari rolled a 3 and moved from 21 to 24
+Aswinth rolled a 4
+Aswinth rolled a 4 and moved from 13 to 17
+Harish rolled a 5
+Harish rolled a 5 and moved from 32 to 37
+Vasanth rolled a 3
+Vasanth rolled a 3 and moved from 13 to 16
+SivaramaKrishnan rolled a 5
+SivaramaKrishnan rolled a 5 and moved from 16 to 21
+Hari rolled a 4
+Hari rolled a 4 and moved from 24 to 28
+Aswinth rolled a 2
+Aswinth rolled a 2 and moved from 17 to 19
+Harish rolled a 5
+Harish rolled a 5 and moved from 37 to 42
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 16 to 18
+SivaramaKrishnan rolled a 3
+SivaramaKrishnan rolled a 3 and moved from 21 to 24
+Hari rolled a 3
+Hari rolled a 3 and moved from 28 to 31
+Aswinth rolled a 5
+Aswinth rolled a 5 and moved from 19 to 24
+Harish rolled a 3
+Harish rolled a 3 and moved from 42 to 45
+Vasanth rolled a 5
+Vasanth rolled a 5 and moved from 18 to 23
+SivaramaKrishnan rolled a 4
+SivaramaKrishnan rolled a 4 and moved from 24 to 28
+Hari rolled a 4
+Hari rolled a 4 and moved from 31 to 35
+Aswinth rolled a 5
+Aswinth rolled a 5 and moved from 24 to 29
+Harish rolled a 4
+Harish rolled a 4 and moved from 45 to 9
+Vasanth rolled a 3
+Vasanth rolled a 3 and moved from 23 to 26
+SivaramaKrishnan rolled a 2
+SivaramaKrishnan rolled a 2 and moved from 28 to 30
+Hari rolled a 2
+Hari rolled a 2 and moved from 35 to 37
+Aswinth rolled a 1
+Aswinth rolled a 1 and moved from 29 to 30
+Harish rolled a 5
+Harish rolled a 5 and moved from 9 to 14
+Vasanth rolled a 1
+Vasanth rolled a 1 and moved from 26 to 46
+SivaramaKrishnan rolled a 2
+SivaramaKrishnan rolled a 2 and moved from 30 to 32
+Hari rolled a 5
+Hari rolled a 5 and moved from 37 to 42
+Aswinth rolled a 2
+Aswinth rolled a 2 and moved from 30 to 32
+Harish rolled a 5
+Harish rolled a 5 and moved from 14 to 19
+Vasanth rolled a 5
+Vasanth rolled a 5 and moved from 46 to 68
+SivaramaKrishnan rolled a 2
+SivaramaKrishnan rolled a 2 and moved from 32 to 34
+Hari rolled a 3
+Hari rolled a 3 and moved from 42 to 45
+Aswinth rolled a 3
+Aswinth rolled a 3 and moved from 32 to 35
+Harish rolled a 5
+Harish rolled a 5 and moved from 19 to 24
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 68 to 70
+SivaramaKrishnan rolled a 4
+SivaramaKrishnan rolled a 4 and moved from 34 to 38
+Hari rolled a 6
+Hari rolled a 6 and moved from 45 to 68
+Aswinth rolled a 1
+Aswinth rolled a 1 and moved from 35 to 36
+Harish rolled a 2
+Harish rolled a 2 and moved from 24 to 26
+Vasanth rolled a 4
+Vasanth rolled a 4 and moved from 70 to 74
+SivaramaKrishnan rolled a 4
+SivaramaKrishnan rolled a 4 and moved from 38 to 42
+Hari rolled a 1
+Hari rolled a 1 and moved from 68 to 69
+Aswinth rolled a 2
+Aswinth rolled a 2 and moved from 36 to 38
+Harish rolled a 5
+Harish rolled a 5 and moved from 26 to 31
+Vasanth rolled a 5
+Vasanth rolled a 5 and moved from 74 to 79
+SivaramaKrishnan rolled a 4
+SivaramaKrishnan rolled a 4 and moved from 42 to 46
+Hari rolled a 3
+Hari rolled a 3 and moved from 69 to 72
+Aswinth rolled a 6
+Aswinth rolled a 6 and moved from 38 to 44
+Harish rolled a 3
+Harish rolled a 3 and moved from 31 to 34
+Vasanth rolled a 3
+Vasanth rolled a 3 and moved from 79 to 82
+SivaramaKrishnan rolled a 5
+SivaramaKrishnan rolled a 5 and moved from 46 to 68
+Hari rolled a 1
+Hari rolled a 1 and moved from 72 to 73
+Aswinth rolled a 6
+Aswinth rolled a 6 and moved from 44 to 50
+Harish rolled a 5
+Harish rolled a 5 and moved from 34 to 39
+Vasanth rolled a 1
+Vasanth rolled a 1 and moved from 82 to 83
+SivaramaKrishnan rolled a 4
+SivaramaKrishnan rolled a 4 and moved from 68 to 72
+Hari rolled a 2
+Hari rolled a 2 and moved from 73 to 75
+Aswinth rolled a 4
+Aswinth rolled a 4 and moved from 50 to 54
+Harish rolled a 5
+Harish rolled a 5 and moved from 39 to 44
+Vasanth rolled a 3
+Vasanth rolled a 3 and moved from 83 to 86
+SivaramaKrishnan rolled a 2
+SivaramaKrishnan rolled a 2 and moved from 72 to 74
+Hari rolled a 5
+Hari rolled a 5 and moved from 75 to 80
+Aswinth rolled a 3
+Aswinth rolled a 3 and moved from 54 to 57
+Harish rolled a 4
+Harish rolled a 4 and moved from 44 to 48
+Vasanth rolled a 2
+Vasanth rolled a 2 and moved from 86 to 16
+SivaramaKrishnan rolled a 4
+SivaramaKrishnan rolled a 4 and moved from 74 to 78
+Hari rolled a 4
+Hari rolled a 4 and moved from 80 to 84
+Aswinth rolled a 3
+Aswinth rolled a 3 and moved from 57 to 60
+Harish rolled a 5
+Harish rolled a 5 and moved from 48 to 53
+Vasanth rolled a 4
+Vasanth rolled a 4 and moved from 16 to 20
+SivaramaKrishnan rolled a 1
+SivaramaKrishnan rolled a 1 and moved from 78 to 79
+Hari rolled a 3
+Hari rolled a 3 and moved from 84 to 87
+Aswinth rolled a 4
+Aswinth rolled a 4 and moved from 60 to 64
+Harish rolled a 6
+Harish rolled a 6 and moved from 53 to 59
+Vasanth rolled a 1
+Vasanth rolled a 1 and moved from 20 to 21
+SivaramaKrishnan rolled a 2
+SivaramaKrishnan rolled a 2 and moved from 79 to 100
+SivaramaKrishnan wins the game
+
+
+Enter no of snakes: 
+9
+Enter snakes head and tail: 
+62 5
+33 6
+49 9
+88 16
+41 20
+56 53
+98 64
+93 73
+95 75
+Enter no of ladders: 
+8
+Enter ladders start and end: 
+2 37
+27 46
+10 32
+51 68
+61 79
+65 84
+71 91
+81 100
+Enter no of players: 
+2
+Enter players name: harish
+vasanth
+Select Dice Value Input: 
+	1.Randomly generated
+	2.User input1
+harish rolled a 2
+harish rolled a 2 and moved from 0 to 37
+vasanth rolled a 4
+vasanth rolled a 4 and moved from 0 to 4
+harish rolled a 3
+harish rolled a 3 and moved from 37 to 40
+vasanth rolled a 5
+vasanth rolled a 5 and moved from 4 to 9
+harish rolled a 5
+harish rolled a 5 and moved from 40 to 45
+vasanth rolled a 2
+vasanth rolled a 2 and moved from 9 to 11
+harish rolled a 5
+harish rolled a 5 and moved from 45 to 50
+vasanth rolled a 5
+vasanth rolled a 5 and moved from 11 to 16
+harish rolled a 2
+harish rolled a 2 and moved from 50 to 52
+vasanth rolled a 2
+vasanth rolled a 2 and moved from 16 to 18
+harish rolled a 4
+harish rolled a 4 and moved from 52 to 53
+vasanth rolled a 4
+vasanth rolled a 4 and moved from 18 to 22
+harish rolled a 5
+harish rolled a 5 and moved from 53 to 58
+vasanth rolled a 5
+vasanth rolled a 5 and moved from 22 to 46
+harish rolled a 3
+harish rolled a 3 and moved from 58 to 79
+vasanth rolled a 5
+vasanth rolled a 5 and moved from 46 to 68
+harish rolled a 2
+harish rolled a 2 and moved from 79 to 100
+harish wins the game
+
+
