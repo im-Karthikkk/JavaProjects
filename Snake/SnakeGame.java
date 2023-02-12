@@ -39,22 +39,27 @@ class SnakeGame{
 	int n;
 	char[][] grid;
 	int[] fruit;
+	ArrayList<int[]> blocks;
 	int fruitsEaten;
 	LinkedList<int[]> snake;
+	int mode;
 	
 	
-	SnakeGame(int m, int n){
+	SnakeGame(int m, int n, int mode){
 		this.m = m;
 		this.n = n;
+		this.mode = mode;
 		grid = new char[m][n];
 		fruit = new int[2];
+		blocks = new ArrayList<>();
 		fruitsEaten = 0;
 		for(int i=0; i<m; i++)
 			Arrays.fill(grid[i], ' ');
 		snake = new LinkedList<>();
-		int i = m/2;
+		int i = 1;
 		int j = n/2;
-		for(int k=0; k<9; k++){
+		int len = mode==2?3:9;
+		for(int k=0; k<len; k++){
 			j += 1;
 			//System.out.println("\ti -> "+i+" j -> "+j);
 			snake.add(new int[]{i, j});
@@ -68,12 +73,21 @@ class SnakeGame{
 		play();
 	}
 	
+	void generateBlocks(){
+		blocks.add(new int[]{10, 32});
+	}
+	
 	void updateBoard(){
 		for(int i=0; i<m; i++)
 			Arrays.fill(grid[i], ' ');
 		grid[fruit[0]][fruit[1]] = '@';
+		for(int k=0; k<blocks.size(); k++){
+			int[] temp = blocks.get(k);
+			grid[temp[0]][temp[1]] = '#';
+		}
 		for(int k=0; k<snake.size(); k++){
 			int[] temp = snake.get(k);
+			//System.out.println("i -> "+temp[0]+" j -> "+temp[1]);
 			if(k==0)
 				grid[temp[0]][temp[1]] = 'X';
 			else
@@ -101,10 +115,11 @@ class SnakeGame{
 		for(int i=0; i<2*n; i++)
 			System.out.print("-");
 		System.out.print("+\n\n\n");
-		System.out.print("size -> "+snake.size());
+		//System.out.print("size -> "+snake.size());
 	}
 	
 	void play(){
+		if(mode==1)generateBlocks();
 		long start = System.currentTimeMillis();
 		String choice  = sc.next();
 		while(!choice.equalsIgnoreCase("exit")){
@@ -112,19 +127,27 @@ class SnakeGame{
 				char c = choice.charAt(i);
 				if(c!='w' && c!='s' && c!='a' && c!='d')continue;
 				if(!crawl(c)){
-					System.out.print("\n\tGame Over ...better luck next time");
+					try{
+					new ProcessBuilder("cmd", "/c", "color C0").inheritIO().start().waitFor();
+					}catch(Exception e){}
+					System.out.print("\n\tGame Over ...better luck next time\n\tPress enter to exit...");
+					sc.nextLine();
+					sc.nextLine();
+					try{
+					new ProcessBuilder("cmd", "/c", "color 07").inheritIO().start().waitFor();
+					}catch(Exception e){}
 					return;
 				}
 				display();
 				try{Thread.sleep(69);}catch(Exception e){}
 			}
-			if(fruitsEaten==10){
+			if(fruitsEaten==5 && mode == 1){
 				long end = System.currentTimeMillis();
-				System.out.println("\n\tYouve completed the game... Time taken : "+((end-start)/1000)+"s");
+				System.out.println("\n\tYou've completed the game... Time taken : "+((end-start)/1000)+"s");
 				updateScores((int)(end-start)/1000);
 				break;
 			}
-			choice  = sc.next();
+			choice = sc.next();
 		}
 	}
 	void updateScores(int time){
@@ -170,6 +193,17 @@ class SnakeGame{
 		System.out.println("\n\n");
 	}
 	void generateFruit(){
+		ArrayList<int[]> spaces = new ArrayList<>();
+		for(int i=0; i<m; i++){
+			for(int j=0; j<n; j++){
+				if(grid[i][j]==' ')
+					spaces.add(new int[]{i,j});
+			}
+		}
+		int ind = (int)System.currentTimeMillis()%spaces.size();
+		
+		///////////////
+		/* 
 		int i = (int)System.currentTimeMillis()%m;
 		int j = (int)System.currentTimeMillis()%n;
 		
@@ -180,30 +214,35 @@ class SnakeGame{
 			j = (int)System.currentTimeMillis()%n;
 			a = (i+1>=m || j+1>=n || j-1<0 || i-1<0) || grid[i-1][j]!=' ' || grid[i+1][j]!=' ';
 			b = (i+1>=m || j+1>=n || j-1<0 || i-1<0) || grid[i][j-1]!=' ' || grid[i][j+1]!=' ';
-		}
-		fruit[0] = i;
-		fruit[1] = j;
-		grid[i][j] = '@';
+		} */
+		fruit[0] = spaces.get(ind)[0];
+		fruit[1] = spaces.get(ind)[1];
+		grid[fruit[0]][fruit[1]] = '@';
 	}
 	void grow(){
 		int[] temp = new int[2];
 		int[] tail = snake.peekLast();
-		if(grid[tail[0]-1][tail[1]]=='O'){  //// ArrayIndexOutOfBoundsException to be handled
+		if(tail[0]-1>0 && grid[tail[0]-1][tail[1]]=='O'){  //// ArrayIndexOutOfBoundsException to be handled
 			temp[0] = tail[0]+1;
 			temp[1] = tail[1];
 		}
-		else if(grid[tail[0]+1][tail[1]]=='O'){
+		else if(tail[0]+1<this.m && grid[tail[0]+1][tail[1]]=='O'){
 			temp[0] = tail[0]-1;
 			temp[1] = tail[1];
 		}
-		else if(grid[tail[0]][tail[1]+1]=='O'){
+		else if(tail[1]+1<this.n && grid[tail[0]][tail[1]+1]=='O'){
 			temp[0] = tail[0];
 			temp[1] = tail[1] - 1;
 		}
-		else if(grid[tail[0]][tail[1]-1]=='O'){
+		else if(tail[1]-1>0 && grid[tail[0]][tail[1]-1]=='O'){
 			temp[0] = tail[0];
 			temp[1] = tail[1] + 1;
 		}
+		//System.out.println("\ni -> "+temp[0]+" j -> "+temp[1]+"\n");
+		if(temp[0]>=this.m)temp[0] = temp[0]%this.m;
+		if(temp[1]>=this.n)temp[1] = temp[1]%this.n; 
+		if(temp[0]<0)temp[0] = this.m-1;
+		if(temp[1]<0)temp[1] = this.n-1;
 		snake.add(temp);
 	}
 	boolean crawl(char c){
@@ -252,30 +291,29 @@ class SnakeGame{
 		if( head[0]==fruit[0] && head[1]==fruit[1] ){     // snake has eaten the fruit
 			fruitsEaten++;
 			generateFruit();
-			grow();
+			if(this.mode == 2)
+				grow();
 		}
 		updateBoard();
 		return true;
 	}
 	
 	public static void main(String[] args){
-		// System.out.print("\n\tPlease select one option: "+
-		// "\n\t  1. Standard board"+
-		// "\n\t  2. Custom board\n\t");
+		System.out.print("\n\tPlease select one option: "+
+		"\n\t  1. Sandclock"+
+		"\n\t  2. Freestyle\n\t");
 		
 		
 		
-		int n = 1;//sc.nextInt();
+		int n = sc.nextInt();
 		while(n!=1 && n!=2){System.out.print("\n\tPlease enter a valid input...\n\t");n = sc.nextInt();}
 		SnakeGame sg = null;
 		
 		switch(n){
-			case 1: sg = new SnakeGame(30, 72); break;
+			case 1: sg = new SnakeGame(30, 72, 1); break;
 			
-			case 2: 
-			int i = sc.nextInt();
-			int j = sc.nextInt();
-			sg = new SnakeGame(i, j);
+			case 2:
+			sg = new SnakeGame(6,12, 2);
 			break;
 		}
 		
