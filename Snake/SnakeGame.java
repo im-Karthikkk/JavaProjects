@@ -74,7 +74,7 @@ class SnakeGame{
 	}
 	
 	void generateBlocks(){
-		blocks.add(new int[]{10, 32});
+		//blocks.add(new int[]{10, 32});
 	}
 	
 	void updateBoard(){
