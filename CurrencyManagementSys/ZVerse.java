@@ -2,6 +2,7 @@
 import java.util.*;
 import java.io.*;
 class ZVerse implements Serializable{
+	static private final long serialVersionUID = 123l;
 	
 	static ZVerse zv = null;
 	static Scanner sc = new Scanner(System.in);
@@ -61,11 +62,11 @@ class ZVerse implements Serializable{
 				if(authenticate(email, password, 'U'))
 					userWindow(email);
 				else{
-					System.out.print("\n\t Either invalid email or password, or your account might be just waiting for approval, please check your credentials and try again later"+
+					System.out.print("\n\tEither invalid email or password, or your account might be just waiting for approval,\n\tplease check your credentials and try again later"+
 					"\n\t Press enter to continue...");
 					sc.nextLine();
 					sc.nextLine();
-					return;
+					
 				}	
 				break;
 			
@@ -81,7 +82,7 @@ class ZVerse implements Serializable{
 					"\n\t Press enter to continue...");
 					sc.nextLine();
 					sc.nextLine();
-					return;
+					
 				}
 				break;
 				
@@ -152,7 +153,7 @@ class ZVerse implements Serializable{
 			}
 		}
 		System.out.print(
-		"\n\t Hello "+name+", please select one option: "+
+		"\n\t Hello "+name.split(" ")[0]+", please select one option: "+
 		"\n\t 1. View profile and balance"+
 		"\n\t 2. View transactions"+
 		"\n\t 3. Change Password"+
@@ -193,7 +194,7 @@ class ZVerse implements Serializable{
 				break;
 			}
 			System.out.print(
-			"\n\t Hello "+name+", please select one option: "+
+			"\n\t Hello "+name.split(" ")[0]+", please select one option: "+
 			"\n\t 1. View profile and balance"+
 			"\n\t 2. View transactions"+
 			"\n\t 3. Change Password"+
@@ -214,9 +215,13 @@ class ZVerse implements Serializable{
 		"\n\t 3. View total ZCoins"+
 		"\n\t 4. View all transactions"+
 		"\n\t 5. Reset user password"+
-		"\n\t 6. Logout\n\t");
+		"\n\t 6. View commission retrieved from a user"+
+		"\n\t 7. View total commission generated"+
+		"\n\t 8. Set conversion factor (real coin / Z coin)"+
+		"\n\t 9. Set commission factor (% of real)"+
+		"\n\t 0. Logout\n\t");
 		int choice = sc.nextInt();
-		while(choice != 6){
+		while(choice != 0){
 			switch(choice){
 				case 1:
 				showUserRequests();
@@ -238,12 +243,12 @@ class ZVerse implements Serializable{
 				break;
 				
 				case 4:
-				System.out.print("\n\t+-------+------------+------+------+------------------------------------------+");
-				System.out.print("\n\t"+String.format("| %-5s | %-10s | %-4s | %-4s | %-40s |", "ID", "Type", "From", "To", "Transaction Details"));
-				System.out.print("\n\t+-------+------------+------+------+------------------------------------------+");
+				System.out.print("\n\t+-------+------------+------+------+--------------------------------------------------------------+");
+				System.out.print("\n\t"+String.format("| %-5s | %-10s | %-4s | %-4s | %-60s |", "ID", "Type", "From", "To", "Transaction Details"));
+				System.out.print("\n\t+-------+------------+------+------+--------------------------------------------------------------+");
 				for(Transaction t: transactions.values())
 					System.out.print(t);
-				System.out.print("\n\t+-------+------------+------+------+------------------------------------------+");
+				System.out.print("\n\t+-------+------------+------+------+--------------------------------------------------------------+");
 				break;
 				
 				case 5:
@@ -259,6 +264,43 @@ class ZVerse implements Serializable{
 					System.out.print("\n\t Please enter a valid user ZId");
 				}
 				break;
+				
+				case 6:
+				System.out.print("\n\tEnter user ZId: ");
+				ZId = sc.nextInt();
+				if(users.containsKey(ZId)){
+					System.out.print("\n\t Commission retrieved from "+users.get(ZId).getName()+": "+users.get(ZId).getCommissionRetrieved()+"/-");
+				}
+				else{
+					System.out.print("\n\t Please enter a valid user ZId");
+				}
+				System.out.println();
+				break;
+				
+				case 7:
+				System.out.print("\n\t Total commission generated as of now: "+commission+"/-");
+				System.out.println();
+				break;
+				
+				case 8:
+				System.out.print("\n\t Enter new conversion factor: ");
+				conversionFactor = sc.nextDouble();
+				while(conversionFactor<=0 || conversionFactor>=1){
+					System.out.print("\n\t Conversion factor out of range (0 < x < 1), please enter a valid conversion factor");
+					conversionFactor = sc.nextDouble();
+				}
+				System.out.print("\n\t Conversion factor changed successfully");
+				break;
+				
+				case 9:
+				System.out.print("\n\t Enter new conversion factor: ");
+				commissionFactor = sc.nextDouble();
+				while(commissionFactor<=0 || commissionFactor>=1){
+					System.out.print("\n\t Commission factor out of range (0 < x < 1), please enter a valid commission factor");
+					commissionFactor = sc.nextDouble();
+				}
+				System.out.print("\n\t Commission factor changed successfully");
+				break;
 			}
 			System.out.print(
 			"\n\tHello agent, please select one option: "+
@@ -267,7 +309,11 @@ class ZVerse implements Serializable{
 			"\n\t 3. View total ZCoins"+
 			"\n\t 4. View all transactions"+
 			"\n\t 5. Reset user password"+
-			"\n\t 6. Logout\n\t");
+			"\n\t 6. View commission retrieved from a user"+
+			"\n\t 7. View total commission generated"+
+			"\n\t 8. Set conversion factor (real coin / Z coin)"+
+			"\n\t 9. Set commission factor (% of real)"+
+			"\n\t 0. Logout\n\t");
 			choice = sc.nextInt();
 		}
 	}
@@ -353,11 +399,11 @@ class ZVerse implements Serializable{
 			}
 			realC = zC*conversionFactor;
 			double netRC = realC - realC*commissionFactor/100;
-			t = new Transaction(transIDGen++, "Conversion", u.getZId(), u.getZId(), "Converted "+zC+"ZCoins to "+netRC+"/-");
+			t = new Transaction(transIDGen++, "Conversion", u.getZId(), u.getZId(), "Converted "+zC+" ZCoins to "+netRC+"/-");
 			u.getHistory().put(t.transId, t);
 			transactions.put(t.transId, t);
 			commission += realC - netRC;
-			u.commissionRetrieved += realC - netRC;
+			u.addToCommission(realC - netRC);
 			u.deposit(netRC);
 			totalZC -= zC;
 		}

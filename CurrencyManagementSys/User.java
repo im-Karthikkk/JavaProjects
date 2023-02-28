@@ -12,7 +12,7 @@ class User implements Serializable{
 	private double rcWallet;
 	private double zcWallet;
 	private HashMap<Integer, Transaction> transactionHistory;
-	double commissionRetrieved;
+	private double commissionRetrieved;
 	
 	User(String name,String email,long number, String H_id, String password, double initDeposit, int Zid){
 		this.name = name;
@@ -34,9 +34,11 @@ class User implements Serializable{
 	String getHId(){return this.H_Id;}
 	int getZId(){return this.ZId;} 
 	HashMap<Integer, Transaction> getHistory(){return this.transactionHistory;}
+	double getCommissionRetrieved(){return this.commissionRetrieved;}
 	
 	void setPassword(String password){this.password = password;} 	// setter
 	void setApprovalStatus(boolean flag){approved = flag;}
+	void addToCommission(double sum){commissionRetrieved += sum;}
 	
 	boolean verifyEmail(String email){return this.email.equals(email);}
 	boolean verifyPassword(String password){return this.password.equals(password);}
@@ -64,23 +66,23 @@ class User implements Serializable{
 			return;
 		}
 		System.out.print("\n\t Name: "+name+"\t\t ZId: "+ZId);
-		System.out.print("\n\t+-------+------------+------+------+------------------------------------------+");
-		System.out.print("\n\t"+String.format("| %-5s | %-10s | %-4s | %-4s | %-40s |", "ID", "Type", "From", "To", "Transaction Details"));
-		System.out.print("\n\t+-------+------------+------+------+------------------------------------------+");
+		System.out.print("\n\t+-------+------------+------+------+--------------------------------------------------------------+");
+		System.out.print("\n\t"+String.format("| %-5s | %-10s | %-4s | %-4s | %-60s |", "ID", "Type", "From", "To", "Transaction Details"));
+		System.out.print("\n\t+-------+------------+------+------+--------------------------------------------------------------+");
 		for(Transaction t: transactionHistory.values())
 			System.out.print(t);
-		System.out.print("\n\t+-------+------------+------+------+------------------------------------------+");
+		System.out.print("\n\t+-------+------------+------+------+--------------------------------------------------------------+");
 		System.out.println();
 	}
 	
 	void viewProfile(){
 		System.out.print(
-		"\n\t Name : "+name+
-		"\n\t Email: "+email+
-		"\n\t Mobile: "+number+
-		"\n\t H_Id: "+H_Id+
+		"\n\t Name   : "+name+
+		"\n\t Email  : "+email+
+		"\n\t Mobile : "+number+
+		"\n\t H_Id   : "+H_Id+
 		"\n"+
-		"\n\t Real currency balance: "+rcWallet+"/-"+
-		"\n\t ZCoin wallet         : "+zcWallet+"zc\n\n");
+		"\n\t Real currency balance : "+rcWallet+"/-"+
+		"\n\t ZCoin wallet          : "+zcWallet+"zc\n\n");
 	}
 }

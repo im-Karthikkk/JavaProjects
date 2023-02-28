@@ -18,7 +18,7 @@ class Transaction implements Serializable{
 	
 	public String toString(){
 		// | ID    | Type      | From | To   | Details                               |
-		String temp = "\n\t"+String.format("| %-5s | %-10s | %-4s | %-4s | %-40s |", transId+"", type, from+"", to+"", details);
+		String temp = "\n\t"+String.format("| %-5s | %-10s | %-4s | %-4s | %-60s |", transId+"", type, from+"", to+"", details);
 		return temp;
 	}
 }
