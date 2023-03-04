@@ -200,7 +200,7 @@ class SnakeGame{
 					spaces.add(new int[]{i,j});
 			}
 		}
-		int ind = (int)System.currentTimeMillis()%spaces.size();
+		long ind = System.currentTimeMillis()%spaces.size();
 		
 		///////////////
 		/* 
@@ -215,8 +215,8 @@ class SnakeGame{
 			a = (i+1>=m || j+1>=n || j-1<0 || i-1<0) || grid[i-1][j]!=' ' || grid[i+1][j]!=' ';
 			b = (i+1>=m || j+1>=n || j-1<0 || i-1<0) || grid[i][j-1]!=' ' || grid[i][j+1]!=' ';
 		} */
-		fruit[0] = spaces.get(ind)[0];
-		fruit[1] = spaces.get(ind)[1];
+		fruit[0] = spaces.get((int)ind)[0];
+		fruit[1] = spaces.get((int)ind)[1];
 		grid[fruit[0]][fruit[1]] = '@';
 	}
 	void grow(){
